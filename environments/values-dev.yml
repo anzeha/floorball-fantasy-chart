@@ -1,0 +1,21 @@
+global:
+  appName: floorball-fantasy
+  namespace: floorball-fantasy-dev
+  env: dev
+  gameDomainServiceUrl: http://game-domain/
+  usersServiceUrl: http://users/api/v1/
+  squadsServiceUrl: http://squads/api/v1/
+  jwtSecret: GNN/KHkBmyc3zKKQYLZW3Lv8W35t/6dfi4uRRrJI7QKbymFKn4Xs24viQDo+zn1/
+
+database:
+  dbUsername: test
+  dbPassword: test
+
+users:
+  adminPassword: Password1!
+# squads:
+# OVERRIDE
+#
+
+# game-domain:
+# OVERRIDE
