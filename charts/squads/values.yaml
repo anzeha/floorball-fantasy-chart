@@ -1,0 +1,4 @@
+appName: squads
+connectionString: "mongodb://test:test@db-squads:27017"
+databaseName: "ffantasy_squads_db"
+collectionName: "squads"

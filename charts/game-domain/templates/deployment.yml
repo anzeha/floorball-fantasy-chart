@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: game-domain
+  namespace: {{.Values.global.namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: game-domain
+  template:
+    metadata:
+      labels:
+        app: game-domain
+    spec:
+      containers:
+        - name: game-domain
+          image: anzeha/ffantasy.domain:9bb6fa8
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: "{{.Values.appName}}-app-config"

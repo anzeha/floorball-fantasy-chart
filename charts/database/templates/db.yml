@@ -1,0 +1,122 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-users
+  namespace: {{.Values.global.namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db-users
+  template:
+    metadata:
+      labels:
+        app: db-users
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:latest
+          env:
+            - name: POSTGRES_USER
+              value: {{.Values.dbUsername}}
+            - name: POSTGRES_PASSWORD
+              value: {{.Values.dbPassword}}
+            - name: POSTGRES_DB
+              value: {{.Values.usersDbName}}
+          ports:
+            - containerPort: 5432
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-users
+  namespace: {{.Values.global.namespace}}
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5432
+  selector:
+    app: db-users
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-game-domain
+  namespace: {{.Values.global.namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db-game-domain
+  template:
+    metadata:
+      labels:
+        app: db-game-domain
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:latest
+          env:
+            - name: POSTGRES_USER
+              value: {{.Values.dbUsername}}
+            - name: POSTGRES_PASSWORD
+              value: {{.Values.dbPassword}}
+            - name: POSTGRES_DB
+              value: {{.Values.gameDomainDbName}}
+          ports:
+            - containerPort: 5432
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-game-domain
+  namespace: {{.Values.global.namespace}}
+spec:
+  type: ClusterIP
+  ports:
+    - port: 5432
+  selector:
+    app: db-game-domain
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-squads
+  namespace: {{.Values.global.namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db-squads
+  template:
+    metadata:
+      labels:
+        app: db-squads
+    spec:
+      containers:
+        - name: mongo
+          image: mongo:latest
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              value: {{.Values.dbUsername}}
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              value: {{.Values.dbPassword}}
+          ports:
+            - containerPort: 27017
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-squads
+  namespace: {{.Values.global.namespace}}
+spec:
+  type: ClusterIP
+  ports:
+    - port: 27017
+  selector:
+    app: db-squads

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gameweek-processor
+  namespace: {{.Values.global.namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gameweek-processor
+  template:
+    metadata:
+      labels:
+        app: gameweek-processor
+    spec:
+      containers:
+        - name: gameweek-processor
+          image: anzeha/ffantasy.gameweek-processor:9bb6fa8
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: "{{.Values.appName}}-app-config"

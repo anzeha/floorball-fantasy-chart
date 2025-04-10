@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{.Values.appName}}-app-config"
+  namespace: {{.Values.global.namespace}}
+data:
+  PORT: "{{.Values.port}}"
+  JWT_SECRET: {{.Values.global.jwtSecret}}
+  PG_HOST: {{.Values.pgHost}}
+  PG_USERNAME: {{.Values.pgUsername}}
+  PG_PASSWORD: {{.Values.pgPassword}}
+  PG_DATABASE: {{.Values.pgDatabase}}
+  PG_PORT: "{{.Values.pgPort}}"
+  USERS_SERVICE_URL: {{.Values.global.usersServiceUrl}}

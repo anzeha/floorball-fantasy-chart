@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: squads
+  namespace: {{.Values.global.namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: squads
+  template:
+    metadata:
+      labels:
+        app: squads
+    spec:
+      containers:
+        - name: squads
+          image: anzeha/ffantasy.squads:9bb6fa8
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: "{{.Values.appName}}-app-config"

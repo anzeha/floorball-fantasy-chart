@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{.Values.appName}}-app-config"
+  namespace: {{.Values.global.namespace}}
+data:
+  CONNECTION_STRING: {{.Values.connectionString}}
+  JWT_SECRET: {{.Values.global.jwtSecret}}
+  DATABASE_NAME: {{.Values.databaseName}}
+  COLLECTION_NAME: {{.Values.collectionName}}
+  GAME_DOMAIN_SERVICE_URL: {{.Values.global.gameDomainServiceUrl}}
+  USERS_SERVICE_URL: {{.Values.global.usersServiceUrl}}

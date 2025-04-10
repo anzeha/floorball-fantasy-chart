@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{.Values.appName}}-app-config"
+  namespace: {{.Values.global.namespace}}
+data:
+  CONNECTION_STRING: {{.Values.connectionString}}
+  GAME_DOMAIN_SERVICE_URL: {{.Values.global.gameDomainServiceUrl}}
+  SQUADS_SERVICE_URL: {{.Values.global.squadsServiceUrl}}
+  USERS_SERVICE_URL: {{.Values.global.usersServiceUrl}}
+  # ELASTIC_SEARCH_URL=http://localhost:9200/

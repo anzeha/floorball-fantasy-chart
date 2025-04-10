@@ -1,0 +1,7 @@
+port: 8080
+pgHost: db-game-domain
+pgUsername: test
+pgPassword: test
+pgDatabase: ffantasy_game_domain_db
+pgPort: 5432
+appName: game-domain
