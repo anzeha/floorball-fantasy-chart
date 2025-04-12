@@ -1,20 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: elastic
+  name: elasticsearch
   namespace: {{.Values.global.namespace}}
+  labels:
+    app: elasticsearch
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: elastic
-  template:
+      app: elasticsearch
+  replicas: 1 
+  template: 
     metadata:
       labels:
-        app: elastic
+        app: elasticsearch
     spec:
       containers:
-        - name: elastic
-          image: docker.elastic.co/elasticsearch/elasticsearch:8.6.0
-          ports:
-            - containerPort: 9200
+      - name: elasticsearch
+        image: docker.elastic.co/elasticsearch/elasticsearch:8.17.4
+        resources:
+          requests:
+            memory: 2Gi
+          limits:
+            memory: 4Gi
+        ports:
+        - containerPort: 9200
+        - containerPort: 9300
+        env:
+        - name: discovery.type
+          value: single-node
