@@ -7,6 +7,7 @@ global:
   squadsServiceUrl: http://squads/api/v1/
   jwtSecret: GNN/KHkBmyc3zKKQYLZW3Lv8W35t/6dfi4uRRrJI7QKbymFKn4Xs24viQDo+zn1/
   elasticSearchUrl: http://esservice:9200
+  hostname: dev-floorball-fantasy.duckdns.org
 
 database:
   dbUsername: test
