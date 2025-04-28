@@ -10,7 +10,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
-    - host: ffantasy.zapto.org
+    - host: {{.Values.global.hostname}}
       http:
         paths:
           - path: /users(/|$)(.*)
