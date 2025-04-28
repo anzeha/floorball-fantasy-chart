@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: gameweek-processor
-          image: anzeha/ffantasy.gameweek-processor:9bb6fa8
+          image: "{{ .Values.image }}:{{ .Values.tag }}"
           ports:
             - containerPort: 8080
           envFrom:

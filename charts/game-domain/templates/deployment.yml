@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: game-domain
-          image: anzeha/ffantasy.domain:9bb6fa8
+          image: "{{ .Values.image }}:{{ .Values.tag }}"
           ports:
             - containerPort: 8080
           envFrom:

@@ -15,9 +15,22 @@ database:
 
 users:
   adminPassword: Password1!
-# squads:
-# OVERRIDE
-#
+  image: anzeha/ffantasy.users
+  tag: 9bb6fa8
+  
+squads:
+  image: anzeha/ffantasy.squads
+  tag: 9bb6fa8
 
-# game-domain:
-# OVERRIDE
+
+game-domain:
+  image: anzeha/ffantasy.domain
+  tag: 9bb6fa8
+
+frontend:
+  image: anzeha/ffantasy.web
+  tag: 042db9c
+
+gameweek-processor:
+  image: anzeha/ffantasy.gameweek-processor
+  tag: 457fd3a
