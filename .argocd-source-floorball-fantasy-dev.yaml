@@ -1,0 +1,32 @@
+helm:
+  parameters:
+  - name: users.image
+    value: anzeha/ffantasy.users
+    forcestring: true
+  - name: users.tag
+    value: 457fd3a
+    forcestring: true
+  - name: squads.image
+    value: anzeha/ffantasy.squads
+    forcestring: true
+  - name: squads.tag
+    value: 457fd3a
+    forcestring: true
+  - name: frontend.image
+    value: anzeha/ffantasy.web
+    forcestring: true
+  - name: frontend.tag
+    value: 042db9c
+    forcestring: true
+  - name: gameweek-processor.image
+    value: anzeha/ffantasy.gameweek-processor
+    forcestring: true
+  - name: gameweek-processor.tag
+    value: 457fd3a
+    forcestring: true
+  - name: game-domain.image
+    value: anzeha/ffantasy.domain
+    forcestring: true
+  - name: game-domain.tag
+    value: 457fd3a
+    forcestring: true
