@@ -2,9 +2,9 @@ global:
   appName: floorball-fantasy
   namespace: floorball-fantasy-staging
   env: staging
-  gameDomainServiceUrl: http://game-domain
-  usersServiceUrl: http://users
-  squadsServiceUrl: http://squads
+  gameDomainServiceUrl: http://game-domain/
+  usersServiceUrl: http://users/
+  squadsServiceUrl: http://squads/
   jwtSecret: GNN/KHkBmyc3zKKQYLZW3Lv8W35t/6dfi4uRRrJI7QKbymFKn4Xs24viQDo+zn1/
   elasticSearchUrl: http://esservice:9200
   hostname: staging-floorball-fantasy.duckdns.org
