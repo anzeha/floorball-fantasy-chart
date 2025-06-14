@@ -2,9 +2,9 @@ global:
   appName: floorball-fantasy
   namespace: floorball-fantasy-dev
   env: dev
-  gameDomainServiceUrl: http://game-domain
-  usersServiceUrl: http://users
-  squadsServiceUrl: http://squads
+  gameDomainServiceUrl: http://game-domain/
+  usersServiceUrl: http://users/api/v1/
+  squadsServiceUrl: http://squads/api/v1/
   jwtSecret: GNN/KHkBmyc3zKKQYLZW3Lv8W35t/6dfi4uRRrJI7QKbymFKn4Xs24viQDo+zn1/
   elasticSearchUrl: http://esservice:9200
   hostname: dev-floorball-fantasy.duckdns.org
@@ -16,21 +16,21 @@ database:
 users:
   adminPassword: Password1!
   image: anzeha/ffantasy.users
-  tag: 9bb6fa8
+  tag: develop-89c9d66
   
 squads:
   image: anzeha/ffantasy.squads
-  tag: 9bb6fa8
+  tag: develop-89c9d66
 
 
 game-domain:
   image: anzeha/ffantasy.domain
-  tag: 9bb6fa8
+  tag: develop-89c9d66
 
 frontend:
   image: anzeha/ffantasy.web
-  tag: 042db9c
+  tag: develop-89c9d66
 
 gameweek-processor:
   image: anzeha/ffantasy.gameweek-processor
-  tag: 457fd3a
+  tag: develop-89c9d66
