@@ -9,3 +9,4 @@ data:
   SQUADS_SERVICE_URL: {{.Values.global.squadsServiceUrl}}
   USERS_SERVICE_URL: {{.Values.global.usersServiceUrl}}
   ELASTIC_SEARCH_URL: {{.Values.global.elasticSearchUrl}}
+  USE_ELASTIC_SEARCH: {{.Values.useElasticSearch}}
