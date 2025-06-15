@@ -6,7 +6,7 @@ global:
   usersServiceUrl: http://users/api/v1/
   squadsServiceUrl: http://squads/api/v1/
   jwtSecret: GNN/KHkBmyc3zKKQYLZW3Lv8W35t/6dfi4uRRrJI7QKbymFKn4Xs24viQDo+zn1/
-  elasticSearchUrl: http://esservice:9200
+  elasticSearchUrl: http://esservice:9200/
   hostname: dev-floorball-fantasy.duckdns.org
 
 database:
@@ -16,21 +16,21 @@ database:
 users:
   adminPassword: Password1!
   image: anzeha/ffantasy.users
-  tag: develop-89c9d66
+  tag: develop-4dc32c4
   
 squads:
   image: anzeha/ffantasy.squads
-  tag: develop-89c9d66
+  tag: develop-4dc32c4
 
 
 game-domain:
   image: anzeha/ffantasy.domain
-  tag: develop-89c9d66
+  tag: develop-4dc32c4
 
 frontend:
   image: anzeha/ffantasy.web
-  tag: develop-89c9d66
+  tag: develop-4dc32c4
 
 gameweek-processor:
   image: anzeha/ffantasy.gameweek-processor
-  tag: develop-89c9d66
+  tag: develop-4dc32c4

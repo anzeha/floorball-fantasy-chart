@@ -1,2 +1,3 @@
 appName: gameweek-processor
 connectionString: "Host=db-users;Port=5432;Database=ffantasy_users;Username=test;Password=test"
+useElasticSearch: false

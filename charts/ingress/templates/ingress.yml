@@ -34,4 +34,11 @@ spec:
                 name: squads
                 port:
                   number: 80
+          - path: /gameweek-processor(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: gameweek-processor
+                port:
+                  number: 80
   ingressClassName: nginx
