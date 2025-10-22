@@ -22,7 +22,7 @@ helm:
     value: anzeha/ffantasy.gameweek-processor
     forcestring: true
   - name: gameweek-processor.tag
-    value: 457fd3a
+    value: staging-39e5c2e
     forcestring: true
   - name: game-domain.image
     value: anzeha/ffantasy.domain
