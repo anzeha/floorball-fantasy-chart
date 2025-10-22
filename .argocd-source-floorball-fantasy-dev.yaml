@@ -10,7 +10,7 @@ helm:
     value: anzeha/ffantasy.squads
     forcestring: true
   - name: squads.tag
-    value: staging-9a691b6
+    value: staging-25e9579
     forcestring: true
   - name: frontend.image
     value: anzeha/ffantasy.web
