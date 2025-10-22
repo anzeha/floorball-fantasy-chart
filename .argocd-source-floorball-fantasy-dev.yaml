@@ -4,7 +4,7 @@ helm:
     value: anzeha/ffantasy.users
     forcestring: true
   - name: users.tag
-    value: 457fd3a
+    value: staging-28b4249
     forcestring: true
   - name: squads.image
     value: anzeha/ffantasy.squads
