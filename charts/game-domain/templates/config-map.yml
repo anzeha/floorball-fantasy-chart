@@ -5,10 +5,7 @@ metadata:
   namespace: {{.Values.global.namespace}}
 data:
   PORT: "{{.Values.port}}"
-  JWT_SECRET: {{.Values.global.jwtSecret}}
   PG_HOST: {{.Values.pgHost}}
-  PG_USERNAME: {{.Values.pgUsername}}
-  PG_PASSWORD: {{.Values.pgPassword}}
   PG_DATABASE: {{.Values.pgDatabase}}
   PG_PORT: "{{.Values.pgPort}}"
   USERS_SERVICE_URL: {{.Values.global.usersServiceUrl}}

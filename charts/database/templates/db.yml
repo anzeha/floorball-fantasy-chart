@@ -18,11 +18,15 @@ spec:
           image: postgres:latest
           env:
             - name: POSTGRES_USER
-              value: {{.Values.dbUsername}}
+              valueFrom:
+              secretKeyRef:
+                name: floorball-fantasy
+                key: DB_USERNAME
             - name: POSTGRES_PASSWORD
-              value: {{.Values.dbPassword}}
-            - name: POSTGRES_DB
-              value: {{.Values.usersDbName}}
+              valueFrom:
+              secretKeyRef:
+                name: floorball-fantasy
+                key: DB_PASSWORD
           ports:
             - containerPort: 5432
 
@@ -60,11 +64,15 @@ spec:
           image: postgres:latest
           env:
             - name: POSTGRES_USER
-              value: {{.Values.dbUsername}}
+              valueFrom:
+              secretKeyRef:
+                name: floorball-fantasy
+                key: DB_USERNAME
             - name: POSTGRES_PASSWORD
-              value: {{.Values.dbPassword}}
-            - name: POSTGRES_DB
-              value: {{.Values.gameDomainDbName}}
+              valueFrom:
+              secretKeyRef:
+                name: floorball-fantasy
+                key: DB_PASSWORD
           ports:
             - containerPort: 5432
 
@@ -102,9 +110,16 @@ spec:
           image: mongo:latest
           env:
             - name: MONGO_INITDB_ROOT_USERNAME
-              value: {{.Values.dbUsername}}
+              valueFrom:
+              secretKeyRef:
+                name: floorball-fantasy
+                key: DB_USERNAME
             - name: MONGO_INITDB_ROOT_PASSWORD
-              value: {{.Values.dbPassword}}
+              valueFrom:
+              secretKeyRef:
+                name: floorball-fantasy
+                key: DB_PASSWORD
+
           ports:
             - containerPort: 27017
 

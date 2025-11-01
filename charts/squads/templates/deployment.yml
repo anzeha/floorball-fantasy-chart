@@ -21,3 +21,9 @@ spec:
           envFrom:
             - configMapRef:
                 name: "{{.Values.appName}}-app-config"
+          env:
+          - name: CONNECTION_STRING
+            valueFrom:
+            secretKeyRef:
+              name: floorball-fantasy
+              key: SQUADS_CONNECTION_STRING

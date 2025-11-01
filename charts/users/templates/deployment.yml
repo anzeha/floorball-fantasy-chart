@@ -18,6 +18,19 @@ spec:
           image: "{{ .Values.image }}:{{ .Values.tag }}"
           ports:
             - containerPort: 8080
-          envFrom:
-            - configMapRef:
-                name: "{{.Values.appName}}-app-config"
+          env:
+          - name: CONNECTION_STRING
+            valueFrom:
+            secretKeyRef:
+              name: floorball-fantasy
+              key: USERS_CONNECTION_STRING
+          - name: ADMIN_PASSWORD
+            valueFrom:
+            secretKeyRef:
+              name: floorball-fantasy
+              key: ADMIN_PASSWORD
+          - name: JWT_SECRET
+            valueFrom:
+            secretKeyRef:
+              name: floorball-fantasy
+              key: JWT_SECRET
