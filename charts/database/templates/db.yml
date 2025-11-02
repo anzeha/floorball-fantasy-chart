@@ -73,6 +73,8 @@ spec:
                 secretKeyRef:
                   name: floorball-fantasy
                   key: DB_PASSWORD
+            - name: POSTGRES_DB
+              value: {{.Values.gameDomainDbName}}
           ports:
             - containerPort: 5432
 
