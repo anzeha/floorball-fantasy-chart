@@ -1,2 +1,2 @@
 appName: gameweek-processor
-useElasticSearch: false
+useElasticSearch: "false"
