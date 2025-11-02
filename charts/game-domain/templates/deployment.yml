@@ -24,16 +24,16 @@ spec:
           env:
           - name: PG_USERNAME
             valueFrom:
-            secretKeyRef:
-              name: floorball-fantasy
-              key: DB_USERNAME
+              secretKeyRef:
+                name: floorball-fantasy
+                key: DB_USERNAME
           - name: PG_PASSWORD
             valueFrom:
-            secretKeyRef:
-              name: floorball-fantasy
-              key: DB_PASSWORD
+              secretKeyRef:
+                name: floorball-fantasy
+                key: DB_PASSWORD
           - name: JWT_SECRET
             valueFrom:
-            secretKeyRef:
-              name: floorball-fantasy
-              key: JWT_SECRET
+              secretKeyRef:
+                name: floorball-fantasy
+                key: JWT_SECRET

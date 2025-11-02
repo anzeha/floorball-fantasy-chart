@@ -19,14 +19,14 @@ spec:
           env:
             - name: POSTGRES_USER
               valueFrom:
-              secretKeyRef:
-                name: floorball-fantasy
-                key: DB_USERNAME
+                secretKeyRef:
+                  name: floorball-fantasy
+                  key: DB_USERNAME
             - name: POSTGRES_PASSWORD
               valueFrom:
-              secretKeyRef:
-                name: floorball-fantasy
-                key: DB_PASSWORD
+                secretKeyRef:
+                  name: floorball-fantasy
+                  key: DB_PASSWORD
           ports:
             - containerPort: 5432
 
@@ -65,14 +65,14 @@ spec:
           env:
             - name: POSTGRES_USER
               valueFrom:
-              secretKeyRef:
-                name: floorball-fantasy
-                key: DB_USERNAME
+                secretKeyRef:
+                  name: floorball-fantasy
+                  key: DB_USERNAME
             - name: POSTGRES_PASSWORD
               valueFrom:
-              secretKeyRef:
-                name: floorball-fantasy
-                key: DB_PASSWORD
+                secretKeyRef:
+                  name: floorball-fantasy
+                  key: DB_PASSWORD
           ports:
             - containerPort: 5432
 
@@ -111,14 +111,14 @@ spec:
           env:
             - name: MONGO_INITDB_ROOT_USERNAME
               valueFrom:
-              secretKeyRef:
-                name: floorball-fantasy
-                key: DB_USERNAME
+                secretKeyRef:
+                  name: floorball-fantasy
+                  key: DB_USERNAME
             - name: MONGO_INITDB_ROOT_PASSWORD
               valueFrom:
-              secretKeyRef:
-                name: floorball-fantasy
-                key: DB_PASSWORD
+                secretKeyRef:
+                  name: floorball-fantasy
+                  key: DB_PASSWORD
 
           ports:
             - containerPort: 27017

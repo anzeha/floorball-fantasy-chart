@@ -24,6 +24,6 @@ spec:
           env:
           - name: CONNECTION_STRING
             valueFrom:
-            secretKeyRef:
-              name: floorball-fantasy
-              key: GAMEWEEK_PROCESSOR_CONNECTION_STRING
+              secretKeyRef:
+                name: floorball-fantasy
+                key: GAMEWEEK_PROCESSOR_CONNECTION_STRING

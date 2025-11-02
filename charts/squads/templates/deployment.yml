@@ -24,11 +24,11 @@ spec:
           env:
           - name: CONNECTION_STRING
             valueFrom:
-            secretKeyRef:
-              name: floorball-fantasy
-              key: SQUADS_CONNECTION_STRING
+              secretKeyRef:
+                name: floorball-fantasy
+                key: SQUADS_CONNECTION_STRING
           - name: JWT_SECRET
             valueFrom:
-            secretKeyRef:
-              name: floorball-fantasy
-              key: JWT_SECRET
+              secretKeyRef:
+                name: floorball-fantasy
+                key: JWT_SECRET
